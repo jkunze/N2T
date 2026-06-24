@@ -101,7 +101,6 @@ async def redirect_docs(request: fastapi.Request):
         request=request,
         name="index.html",
         context={
-            "request": request,
             "environment": app.state.settings.environment,
             "version": __version__,
         },
@@ -116,7 +115,6 @@ async def human_pages(request: fastapi.Request, page: str):
             request=request,
             name=page,
             context={
-                "request": request,
                 "environment": app.state.settings.environment,
                 "version": __version__,
             },
@@ -127,7 +125,6 @@ async def human_pages(request: fastapi.Request, page: str):
         request=request,
         name="404.html",
         context={
-            "request": request,
             "environment": app.state.settings.environment,
             "version": __version__,
         },
