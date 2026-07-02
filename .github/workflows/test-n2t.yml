@@ -1,7 +1,9 @@
 # This workflow will install Python dependencies, run tests and build
 
 name: Test N2T
-on: push
+on:
+  push:
+  pull_request:
 
 jobs:
   tests:
